@@ -1,0 +1,81 @@
+[
+    {
+      "name": "High Waisted Jeans",
+      "price": "$50",
+      "description": "100% cotton with fitted waist and straight leg",
+      "categories": [
+        "Pants",
+        "Bottoms"
+      ]
+    },
+    {
+      "name": "Striped T-Shirt",
+      "price": "$20",
+      "description": "Short-sleeve tee with large navy and white stripes",
+      "categories": [
+        "Top"
+      ]
+    },
+    {
+      "name": "Oversized Blazer",
+      "price": "$80",
+      "description": "Relaxed blazer in neutrals and plaid patterns",
+      "categories": [
+        "Outerwear",
+        "Top"
+      ]
+    },
+    {
+      "name": "White Button-Down",
+      "price": "$40",
+      "description": "100% linen white shirt with a relaxed fit",
+      "categories": [
+        "Top"
+      ]
+    },
+    {
+      "name": "Ballet Flats",
+      "price": "$40",
+      "description": "Rounded toe and bow detail with minimal heel",
+      "categories": [
+        "Shoes",
+        "Outerwear"
+      ]
+    },
+    {
+      "name": "Jean Jacket",
+      "price": "$60",
+      "description": "Cropped, relaxed jacket made of 100% cotton",
+      "categories": [
+        "Outerwear",
+        "Top"
+      ]
+    },
+    {
+      "name": "Black Mini Skirts",
+      "price": "$35",
+      "description": "100% cotton black mini skirt with front and back pockets",
+      "categories": [
+        "Skirts",
+        "Bottoms"
+      ]
+    },
+    {
+      "name": "Cashmere Sweater",
+      "price": "$110",
+      "description": "100% cashmere sweater in cropped, relaxed fit",
+      "categories": [
+        "Top"
+      ]
+    },
+    {
+      "name": "Slip Dress",
+      "price": "$60",
+      "description": "100% silk, full-length slip dress",
+      "categories": [
+        "Dress",
+        "Top",
+        "Bottoms"
+      ]
+    }
+  ]
