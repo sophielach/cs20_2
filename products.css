@@ -1,0 +1,10 @@
+@charset "utf-8";
+products {width: 80%; margin: 80px auto 0 auto; padding: 10%; border:20px solid #811a1a; padding: 20px}
+product {display:block; margin-bottom: 30px;}
+product description {font-size: 16px; font-style: italic; width: 90%; display:block;}
+product name{font-size:18px; display:inline-block; color:#811a1a}
+product price{font-size:28px; display:inline-block;}
+product categories:before {content: "Tags:"; font-size: 14px;}
+product categories category { display: inline;}
+product categories category:after {content: ", ";}
+product categories category:last-child:after {content: "";}
