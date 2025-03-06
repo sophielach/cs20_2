@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href = "products.css" ?>
+
+<products>
+    <product>
+        <name>High Waisted Jeans</name>
+        <price>$50</price>
+        <description>100% cotton with fitted waist and straight leg</description>
+        <categories>
+            <category>Pants</category> 
+            <category>Bottoms </category>
+
+        </categories>
+
+    </product>
+    <product>
+        <name>Striped T-Shirt</name>
+        <price>$20</price>
+        <description>Short-sleeve tee with large navy and white stripes</description>
+        <categories>
+            <category>Top</category>
+        </categories>
+
+    </product>
+
+    <product>
+        <name>Oversized Blazer</name>
+        <price>$80</price>
+        <description>Relaxed blazer in neutrals and plaid patterns</description>
+        <categories>
+            <category>Outerwear</category>
+            <category>Top</category>
+        </categories>
+
+    </product>
+    <product>
+        <name>White Button-Down </name>
+        <price>$40</price>
+        <description>100% linen white shirt with a relaxed fit</description>
+        <categories>
+            <category>Top</category>
+        </categories>
+    </product>
+    <product>
+        <name>Ballet Flats</name>
+        <price>$40</price>
+        <description>Rounded toe and bow detail with minimal heel </description>
+        <categories>
+            <category>Shoes </category>
+            <category>Outerwear</category>
+
+        </categories>
+    </product>
+    <product>
+        <name> Jean Jacket</name>
+        <price>$60</price>
+        <description>Cropped, relaxed jacket made of 100% cotton </description>
+        <categories>
+            <category>Outerwear</category>
+            <category>Top</category>
+        </categories>
+    </product>
+    <product>
+        <name>Black Mini Skirts</name>
+        <price>$35</price>
+        <description>100% cotton black mini skirt with front and back pockets</description>
+        <categories>
+            <category>Skirts</category>
+            <category>Bottoms </category>
+
+        </categories>
+    </product>
+    <product>
+        <name>Cashmere Sweater</name>
+        <price>$110</price>
+        <description> 100% cashmere sweater in cropped, relaxed fit</description>
+        <categories>
+            <category>Top</category>
+        </categories>
+    </product>
+    <product>
+        <name> Slip Dress</name>
+        <price>$60</price>
+        <description> 100% silk, full-length slip dress</description>
+        <categories>
+            <category>Dress</category>
+            <category>Top</category>
+            <category>Bottoms</category>
+        </categories>
+    </product>
+</products>
