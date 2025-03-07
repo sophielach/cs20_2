@@ -45,19 +45,19 @@ button {background-color: #811a1a; color:white}
 
                 $('#btn').click(function() {
                     var currCat = $('#selector').val(); 
-                    var filteredProducts = [];
+                    var currProds = [];
 
                     if (currCat) {
-                        filteredProducts = data.filter(function(product) {
+                        currProds = data.filter(function(product) {
                             return product.categories.indexOf(currCat) !== -1;;
                         });
                     } else {
-                        filteredProducts = data;  // use all data if no product is specified
+                        currProds = data;  // use all data if no product is specified
                     }
 
                     // concatenate all of the products
                     var str = "<ul>";
-                    filteredProducts.forEach(function(product) {
+                        currProds.forEach(function(product) {
                         str += "<li>" + product.name + "</li>";
                     });
                     str += "</ul>";
