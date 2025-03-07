@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Products 3</title>
+</head>
+
+<style> 
+h3 {font-size: 24px; color: #811a1a; margin-bottom: 5px; margin-right: 5px; display: inline-block}
+price { font-size: 20px; font-weight: bold; display: inline-block; }
+descrip { font-size: 15px; font-style: italic; display: block; margin-bottom: 3px;}
+categ { font-size: 15px; display: block; margin-bottom: 10px;}
+button {background-color: #811a1a; color:white}
+</style>
+
+
+
+<body>
+    <h3> Find Clothing by Category </h3>
+    <button id="btn">Filter</button>
+    <select id="selector">
+        <option value="">Choose the Category</option>
+    </select>
+    <div id="list"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <div id="result"></div>
+
+    <script>
+        $(document).ready(function() {
+            //load data
+            $.get("https://sophielach.github.io/cs20_2/product_list/products.json", function(data) {
+                
+                // make a set of categories
+                categoriesSet = new Set();
+                data.forEach(function(product) {
+                    product.categories.forEach(function(category) {
+                        categoriesSet.add(category);
+                    });
+                });
+
+                // add categories to select
+                categoriesSet.forEach(function(category) {
+                    $('#selector').append('<option value="' + category + '">' + category + '</option>');
+                });
+
+                $('#btn').click(function() {
+                    var currCat = $('#selector').val(); 
+                    var filteredProducts = [];
+
+                    if (currCat) {
+                        filteredProducts = data.filter(function(product) {
+                            return product.categories.indexOf(currCat) !== -1;;
+                        });
+                    } else {
+                        filteredProducts = data;  // use all data if no product is specified
+                    }
+
+                    // concatenate all of the products
+                    var str = "<ul>";
+                    filteredProducts.forEach(function(product) {
+                        str += "<li>" + product.name + "</li>";
+                    });
+                    str += "</ul>";
+
+                    $('#list').html(str);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
