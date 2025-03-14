@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Artwork </title>
+    <style>
+        body {background-color: #faf3f3;}
+        h1 {color: #5d071e;}
+    </style>
+</head>
+<body>
+    <h1>Cat Artwork of the Art Institute of Chicago</h1>
+    
+    <div id="artwork"> </div>
+    
+    <div id="about">
+
+        <p> I used the API from the Art Institue of Chicago's cat artwork. 
+            I used this because I majored in art history in undergrad and I am interested in marging art and tech, so it is a useful thing to learn, 
+        especially how to navigate images with iiif. <br> I found the website on the list of "actually free API's" that was in our class reading for this week. <br>
+        In my query string, I searched for cats and I returned the fields for the artwork id, the title, the artist, and the date for 5 of them. <br>
+        This API would be super helpful if I am ever doing writing about different artwork in various museums and I need to easily access many images in a catalog.
+     </p>
+
+
+    </div>
+    <script>
+        // get API
+        function fetchCatArtwork() {
+            
+            fetch("https://api.artic.edu/api/v1/artworks/search?q=cats&fields=title,image_id,artist_display,date_display&limit=5")
+                .then(res => {return res.text();})
+                .then(data => {
+                    data = JSON.parse(data)
+                    displayArtworks(data.data);
+                    
+                })
+                .catch(error => console.log(error));
+        }
+
+        // Display the artwork in the page
+        function displayArtworks(artworks) {
+            const container = document.getElementById("artwork");
+            
+            artworks.forEach(artwork => {
+                
+                art_each = document.createElement("div");
+                art_each.innerHTML = `
+                    <img src="${`https://www.artic.edu/iiif/2/${artwork.image_id}/full/400,/0/default.jpg`}">
+                        <h3>${artwork.title}</h3>
+                         <p>${artwork.date_display}</p>
+                        <p>${artwork.artist_display}</p>
+                `;
+                container.appendChild(art_each);
+            });
+        }
+
+        window.onload = fetchCatArtwork;
+    </script>
+</body>
+</html>
